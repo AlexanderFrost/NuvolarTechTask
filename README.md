@@ -12,7 +12,8 @@
 
 
 # SUMMARY OF STRUCTURE
-* Project was developed by using cucumber framework. There is 3 main title
+* Project contain 3 different Test FrontEnd, BackEnd, Manuel Test Cases
+* Project was developed by using cucumber framework. Automation structure has 3 main title
   * src folder ==> contains test codes and feature files (main body of code structure)
     * src folder structure like the below
     
@@ -32,19 +33,18 @@
 ![Manuel Tests](Images/ManuelTests.png)
 
 # TEST EXECUTION
-* You must have relevant JAVA, maven, **[Google Chrome (latest version)](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwr-SSBhC9ARIsANhzu15P0PA-n9Zp4NpxKaOHVGtBD1TZQH0HlQQE6hUfsOFAU1nf-Rzdlf4aAoTJEALw_wcB&gclsrc=aw.ds)** and docker desktop in your computer
+* You must have relevant JAVA, maven, **[Google Chrome (latest version)](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwr-SSBhC9ARIsANhzu15P0PA-n9Zp4NpxKaOHVGtBD1TZQH0HlQQE6hUfsOFAU1nf-Rzdlf4aAoTJEALw_wcB&gclsrc=aw.ds)** in your computer
 * Clone the project to your local
   * Open the terminal in the folder and for run the test, provide the code following
   ```
   mvn test
   ```
-    * When start the execution, initially downloads the dependencies
     * Then starts the test
     * If you want to run with different browser, provide the code following
   ``` 
   mvn test -Dbrowser="firefox" or "edge, opera"  
   ```
-* If you want to run the test case with IDE you must to use cukesrunner class and just click the run button.
+* If you want to run the test case with IDE (intellij idea) you must to use cukesrunner class and just click the run button.
   * For change the browser, open configuration file
 * End of the execution, you can get result of execution from "target/default-html-reports/index.html"
 
