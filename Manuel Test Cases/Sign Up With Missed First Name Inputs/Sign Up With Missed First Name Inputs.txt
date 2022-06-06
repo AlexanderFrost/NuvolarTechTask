@@ -1,0 +1,15 @@
+* Test Environment : https://www.facebook.com
+* Test Data
+  * For generate dummy email, use https://temp-mail.org/en/
+  * For Firstname and Lastname generate dummy data for each attempt again & again
+  * For Date of birth use randoms
+
+SCENARIO: Sign Up With Missed First Name Inputs
+    * Given user on the home page
+    * When click "Create New Account" button
+    * Then verify sign up pop up page
+    * When provide valid last name, email, password, date of birth and gender
+    * And verify first name input borders turns to red and warning sign appear in the input box
+    * Then click the warning sign
+    * Then click the "Sign Up" button
+    * And verify the information pop up appeared

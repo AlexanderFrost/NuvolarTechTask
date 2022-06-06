@@ -1,0 +1,14 @@
+* Test Environment : https://www.facebook.com
+* Test Data
+  * For generate dummy email, use https://temp-mail.org/en/
+  * For Firstname and Lastname generate dummy data for each attempt again & again
+  * For Date of birth use randoms
+
+SCENARIO: Sign Up With Last Name Numbers
+    * Given user on the home page
+    * When click "Create New Account" button
+    * Then verify sign up pop up page
+    * When provide last name with numbers
+    * Then provide first name, email, password, date of birth and gender with valid credentials
+    * Then click the "Sign Up" button
+    * And verify warning message appeared

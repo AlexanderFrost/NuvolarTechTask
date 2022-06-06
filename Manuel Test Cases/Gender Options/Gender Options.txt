@@ -1,0 +1,12 @@
+* Test Environment : https://www.facebook.com
+* Test Data
+  * For generate dummy email, use https://temp-mail.org/en/
+  * For Firstname and Lastname generate dummy data for each attempt again & again
+  * For Date of birth use randoms
+
+SCENARIO: Gender Options
+* Given user on the home page
+* When click "Create New Account" button
+* Then verify sign up pop up page
+* Then click gender other option
+* And verify "Select your pronoun" and "Gender" inputs appeared
