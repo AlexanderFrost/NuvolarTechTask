@@ -12,20 +12,40 @@ public class ProductPage {
 
 
     @FindBy(id = "productTitle")
-    public WebElement productTitle;
+    private WebElement productTitle;
 
     @FindBy(id = "nav-cart-count")
-    public WebElement cartBtn;
+    private WebElement cartBtn;
 
     @FindBy(xpath = "//div[@class='a-box-group']//span[@class='a-button-text a-declarative']")
-    public WebElement quantityBtn;
+    private WebElement quantityBtn;
 
     @FindBy(xpath = "//div[@class='a-popover a-dropdown a-dropdown-common a-declarative']//li")
-    public List<WebElement> quantity;
+    private List<WebElement> quantity;
 
     @FindBy(id = "add-to-cart-button")
-    public WebElement addToCartBtn;
+    private WebElement addToCartBtn;
 
 
+    public String getProductTitle() {
+        return productTitle.getText().trim();
+    }
 
+    public void addToCart() {
+        addToCartBtn.click();
+    }
+
+    public void goToShoppingCart() {
+        cartBtn.click();
+    }
+
+    public void selectTheQuantity(String num) {
+        quantityBtn.click();
+        for (WebElement e:quantity) {
+            if (e.getText().trim().equals(num)){
+                e.click();
+                break;
+            }
+        }
+    }
 }

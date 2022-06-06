@@ -14,21 +14,21 @@ public class CartPage {
     }
 
     @FindBy(id = "sc-subtotal-label-buybox")
-    public WebElement cartPageTotalQuantity;
+    private WebElement cartPageTotalQuantity;
     @FindAll({@FindBy(xpath = "(//span[@class='a-size-medium a-color-base sc-price sc-white-space-nowrap'])[1]"),
                 @FindBy(xpath = "(//span[@class='a-price']/span[@class='a-offscreen'])[1]")})
-    public WebElement cartPageTotalPrice;
+    private WebElement cartPageTotalPrice;
     @FindBy(xpath = "//div[@class='a-popover-wrapper']//li")
-    public List<WebElement> cartPageQuantity;
+    private List<WebElement> cartPageQuantity;
     @FindAll({@FindBy(xpath = "(//div[@class='a-row sc-list-item sc-java-remote-feature']//span[@class='a-button-text a-declarative'])[2]"),
             @FindBy(xpath = "(//span[@class='a-button-text a-declarative'])[2]")})
-    public WebElement cartPageQuantityBtn;
+    private WebElement cartPageQuantityBtn;
     @FindAll({@FindBy(css = ".a-size-medium.a-color-base.sc-price.sc-white-space-nowrap.sc-product-price.a-text-bold"),
             @FindBy(xpath = "//span[@class='a-price sc-product-price']/span[1]")})
-    public List<WebElement> productPrice;
+    private List<WebElement> productPrice;
     @FindAll({@FindBy(xpath = "//div[@class='a-row sc-list-item sc-list-item-border sc-java-remote-feature']//span[@class='a-dropdown-prompt']"),
             @FindBy(xpath = "//div[@class='sc-item-content-group']//span[@class='a-dropdown-prompt']")})
-    public List<WebElement> productQuantity;
+    private List<WebElement> productQuantity;
 
     public String getCartPageTotalQuantity(){
         String quantity = cartPageTotalQuantity.getText().trim();

@@ -17,15 +17,13 @@ public class HomePageStepDefs {
 
     @When("user search {string}")
     public void user_search(String searchItem) {
-        BrowserUtils.waitForClickablility(homePage.searchBtn,10);
-        homePage.searchBar.sendKeys(searchItem);
-        homePage.searchBtn.click();
+        BrowserUtils.waitForPageToLoad(15);
+        homePage.search(searchItem);
     }
 
     @Then("click the first product")
     public void click_the_first_product() {
-        BrowserUtils.waitForClickablility(homePage.firstProductOfList,10);
-        productTitle=homePage.firstProductOfList.getText().trim();
-        homePage.firstProductOfList.click();
+        BrowserUtils.waitForPageToLoad(15);
+        productTitle=homePage.firstProductOfList();
     }
 }

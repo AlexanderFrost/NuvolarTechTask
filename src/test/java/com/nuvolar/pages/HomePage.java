@@ -15,14 +15,22 @@ public class HomePage {
     public HomePage(){PageFactory.initElements(Driver.get(), this);}
 
     @FindBy(id = "twotabsearchtextbox")
-    public WebElement searchBar;
+    private WebElement searchBar;
 
     @FindBy(id = "nav-search-submit-button")
-    public WebElement searchBtn;
+    private WebElement searchBtn;
 
     @FindBy(xpath = "(//span[@class='a-size-base-plus a-color-base a-text-normal'])[1]")
-    public WebElement firstProductOfList;
+    private WebElement firstProductOfList;
 
-    @FindBy(id = "nav-cart-count")
-    public WebElement cartCount;
+    public void search(String searchText) {
+        searchBar.sendKeys(searchText);
+        searchBtn.click();
+    }
+
+    public String firstProductOfList() {
+        String title = firstProductOfList.getText().trim();
+        firstProductOfList.click();
+        return title;
+    }
 }

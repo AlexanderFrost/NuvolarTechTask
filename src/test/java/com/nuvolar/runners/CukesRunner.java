@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/nuvolar/step_definitions",
         dryRun = false,
-        tags = "@wip or @petAPI"
+        tags = "@wip"
 
 )
 public class CukesRunner {

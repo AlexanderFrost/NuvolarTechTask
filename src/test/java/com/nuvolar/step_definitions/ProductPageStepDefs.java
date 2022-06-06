@@ -12,24 +12,23 @@ public class ProductPageStepDefs {
 
     @And("verify the product page")
     public void verifyTheProductPage() {
-        BrowserUtils.waitForClickablility(productPage.productTitle,10);
-        Assert.assertEquals(HomePageStepDefs.productTitle,productPage.productTitle.getText().trim());
+        BrowserUtils.waitForPageToLoad(15);
+        Assert.assertEquals(HomePageStepDefs.productTitle,productPage.getProductTitle());
     }
 
     @Then("select the product quantity {string}")
     public void select_the_product_quantity(String num) {
-        productPage.quantityBtn.click();
-        BrowserUtils.selectQuantity(productPage.quantity,num);
+        productPage.selectTheQuantity(num);
     }
 
 
     @Then("add to shopping cart")
     public void add_to_shopping_cart() {
-        productPage.addToCartBtn.click();
+        productPage.addToCart();
     }
 
     @Then("go to cart page")
     public void goToCartPage() {
-        productPage.cartBtn.click();
+        productPage.goToShoppingCart();
     }
 }

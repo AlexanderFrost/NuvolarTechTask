@@ -2,8 +2,6 @@ package com.nuvolar.step_definitions;
 
 import com.nuvolar.pages.CartPage;
 import com.nuvolar.utilities.BrowserUtils;
-import com.nuvolar.utilities.ConfigurationReader;
-import com.nuvolar.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
