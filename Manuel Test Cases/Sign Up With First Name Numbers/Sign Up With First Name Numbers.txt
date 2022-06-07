@@ -1,8 +1,11 @@
 * Test Environment : https://www.facebook.com
 * Test Data
-  * For generate dummy email, use https://temp-mail.org/en/
-  * For Firstname and Lastname generate dummy data for each attempt again & again
-  * For Date of birth use randoms
+  * Firstname       : 21434 (random numbers)
+  * Lastname        : Yılmaz
+  * Email           : asdere@gmail.com
+  * Password        : 3aSerWq?qwsF
+  * Date Of Birth   : 6 Jun 2003
+  * Gender          : Male
 
 SCENARIO: Sign Up With First Name Numbers
     * Given user on the home page

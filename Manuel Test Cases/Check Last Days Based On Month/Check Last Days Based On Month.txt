@@ -1,8 +1,11 @@
 * Test Environment : https://www.facebook.com
 * Test Data
-  * For generate dummy email, use https://temp-mail.org/en/
-  * For Firstname and Lastname generate dummy data for each attempt again & again
-  * For Date of birth use randoms
+  * Firstname       : John
+  * Lastname        : Doe
+  * Email           : yirim35265@musezoo.com
+  * Password        : 3aSerWq?qwsF
+  * Date Of Birth   : 31 Feb 2007
+  * Gender          : Male
 
 SCENARIO: Check Last Days Based On Month
     * Given user on the home page
